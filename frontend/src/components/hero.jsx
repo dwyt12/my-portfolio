@@ -7,14 +7,18 @@ import {
   FaDatabase,
 } from "react-icons/fa";
 
-const FLOATING_ICONS = [
-  { Icon: FaShareAlt, pos: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" },
-  { Icon: FaCog, pos: "top-6 right-0 translate-x-1/2" },
-  { Icon: FaJs, pos: "top-1/2 left-0 -translate-x-1/2 -translate-y-1/2" },
-  { Icon: FaReact, pos: "top-1/2 right-0 translate-x-1/2 -translate-y-1/2" },
-  { Icon: FaCss3Alt, pos: "bottom-6 left-2" },
-  { Icon: FaDatabase, pos: "bottom-6 right-2" },
-];
+// Icons are spread evenly around the circle (every 60°, starting at the top)
+// so each one sits exactly on the edge of the photo.
+const FLOATING_ICONS = [FaShareAlt, FaCog, FaReact, FaDatabase, FaCss3Alt, FaJs];
+
+function iconStyle(index, total) {
+  const angle = ((-90 + (360 / total) * index) * Math.PI) / 180;
+  return {
+    left: `${50 + 50 * Math.cos(angle)}%`,
+    top: `${50 + 50 * Math.sin(angle)}%`,
+    transform: "translate(-50%, -50%)",
+  };
+}
 
 export default function Hero() {
   return (
@@ -48,10 +52,11 @@ export default function Hero() {
           />
         </div>
 
-        {FLOATING_ICONS.map(({ Icon, pos }, i) => (
+        {FLOATING_ICONS.map((Icon, i) => (
           <div
             key={i}
-            className={`absolute ${pos} w-11 h-11 rounded-full bg-navy-800 border border-navy-600 flex items-center justify-center text-accentBlue shadow-lg`}
+            style={iconStyle(i, FLOATING_ICONS.length)}
+            className="absolute w-11 h-11 rounded-full bg-navy-800 border border-navy-600 flex items-center justify-center text-accentBlue shadow-lg"
           >
             <Icon size={18} />
           </div>
