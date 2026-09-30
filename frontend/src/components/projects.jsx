@@ -15,6 +15,7 @@ const FALLBACK_PROJECTS = [
     title: "Non-Disclosure Agreement System",
     description:
       "A secure platform for creating, signing, and managing non-disclosure agreements.",
+    image: "/mynda.jpg",
     tags: ["React", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com",
     demo: "https://example.com",
@@ -24,6 +25,7 @@ const FALLBACK_PROJECTS = [
     title: "POS System",
     description:
       "A secure platform for creating, signing, and managing point-of-sale transactions.",
+    image: "/mypos.png",
     tags: ["React", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com",
     demo: "https://example.com",
@@ -54,6 +56,14 @@ export default function Projects() {
       <div className="mt-12 grid md:grid-cols-2 gap-8">
         {projects.map((p) => (
           <div key={p._id} className="card p-6">
+            {p.image && (
+              <img
+                src={p.image}
+                alt={`${p.title} screenshot`}
+                loading="lazy"
+                className="w-full h-48 object-cover object-top rounded-lg mb-5 border border-navy-600"
+              />
+            )}
             <h3 className="text-xl font-semibold text-white">{p.title}</h3>
             <p className="mt-2 text-slate-400 text-sm leading-relaxed">{p.description}</p>
 
