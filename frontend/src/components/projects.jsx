@@ -12,7 +12,7 @@ const FALLBACK_PROJECTS = [
   },
   {
     _id: "2",
-    title: "NDA Agreement System",
+    title: "Non-Disclosure Agreement System",
     description:
       "A secure platform for creating, signing, and managing non-disclosure agreements.",
     tags: ["React", "Node.js", "Express.js", "MongoDB"],
