@@ -25,7 +25,7 @@ export default function Hero() {
     <section id="home" className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
       <div>
         <p className="text-3xl md:text-4xl font-semibold text-white">Hi, I'm</p>
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text mt-1">
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-[1.25] pb-2 gradient-text mt-1">
           Dwight James Dupit
         </h1>
         <p className="mt-6 text-slate-400 max-w-md leading-relaxed">
@@ -47,7 +47,7 @@ export default function Hero() {
         <div className="relative w-full h-full rounded-full border border-navy-600 bg-navy-800 overflow-hidden shadow-glow">
           <img
             src="/logo.jpg"
-            alt="Sajid Yaqub"
+            alt="Dwight James Dupit"
             className="w-full h-full object-cover"
           />
         </div>
