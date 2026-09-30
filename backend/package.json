@@ -1,0 +1,18 @@
+{
+  "name": "mern-portfolio-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "free-port": "node scripts/free-port.js",
+    "prestart": "npm run free-port",
+    "start": "node server.js",
+    "predev": "npm run free-port",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "mongoose": "^8.24.4"
+  }
+}

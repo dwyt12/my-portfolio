@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #080b17;
+  --color-navy-900: #0b0f20;
+  --color-navy-800: #10152a;
+  --color-navy-700: #161c36;
+  --color-navy-600: #1e2542;
+  --color-accentBlue: #3b82f6;
+  --color-accentPink: #ef4a6d;
+
+  --background-image-brand-gradient: linear-gradient(90deg, #3b82f6 0%, #ef4a6d 100%);
+
+  --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-navy-900 text-slate-200 antialiased;
+}
+
+.gradient-text {
+  @apply bg-brand-gradient bg-clip-text text-transparent;
+}
+
+.btn-gradient {
+  @apply bg-brand-gradient text-white font-medium px-6 py-3 rounded-full transition-transform duration-200 hover:scale-[1.03] inline-flex items-center gap-2;
+}
+
+.btn-outline {
+  @apply border border-slate-600 text-slate-200 font-medium px-6 py-3 rounded-full transition-colors duration-200 hover:border-accentBlue hover:text-accentBlue inline-flex items-center gap-2;
+}
+
+.section-eyebrow {
+  @apply text-slate-400 text-center max-w-2xl mx-auto;
+}
+
+.card {
+  @apply bg-navy-800/70 border border-navy-600 rounded-2xl;
+}
