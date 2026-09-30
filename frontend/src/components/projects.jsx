@@ -3,19 +3,28 @@ import { useEffect, useState } from "react";
 const FALLBACK_PROJECTS = [
   {
     _id: "1",
-    title: "E-Commerce Platform",
+    title: "Acadia",
     description:
-      "A full-featured storefront with cart, checkout, and an admin dashboard for managing inventory.",
+      "Acadia is where you view your grades and either help others as a tutor or get help as a tutee.",
     tags: ["React", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com",
     demo: "https://example.com",
   },
   {
     _id: "2",
-    title: "Real-Time Chat App",
+    title: "NDA Agreement System",
     description:
-      "A socket-powered chat application with rooms, typing indicators, and message history.",
-    tags: ["React", "Node.js", "Express.js", "Socket.io"],
+      "A secure platform for creating, signing, and managing non-disclosure agreements.",
+    tags: ["React", "Node.js", "Express.js", "MongoDB"],
+    github: "https://github.com",
+    demo: "https://example.com",
+  },
+  {
+    _id: "3",
+    title: "POS System",
+    description:
+      "A secure platform for creating, signing, and managing point-of-sale transactions.",
+    tags: ["React", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com",
     demo: "https://example.com",
   },
