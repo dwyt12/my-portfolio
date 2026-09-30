@@ -23,9 +23,19 @@ export default function About() {
           feel fast, secure, and intuitive. I actively explore new tools in the MERN
           ecosystem to stay updated and keep improving my development workflow.
         </p>
-        <a href="MyResume.pdf" download className="btn-gradient mt-6">
-          Download Resume ↓
-        </a>
+        <div className="mt-6 flex flex-wrap gap-4">
+          <a
+            href="/MyResume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            View Resume ↗
+          </a>
+          <a href="/MyResume.pdf" download="Dwight-James-Dupit-Resume.pdf" className="btn-gradient">
+            Download Resume ↓
+          </a>
+        </div>
       </div>
     </section>
   );
