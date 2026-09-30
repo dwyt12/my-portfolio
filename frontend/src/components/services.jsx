@@ -39,7 +39,7 @@ const SERVICES = [
 export default function Services() {
   return (
     <section id="services" className="max-w-6xl mx-auto px-6 py-16">
-      <h2 className="text-3xl font-bold text-white text-center">Services I Offer</h2>
+      <h2 className="text-3xl font-bold text-white text-center">Services I Provide to My Classmates</h2>
       <p className="section-eyebrow mt-3">
         Available for freelance work. I can help you build, improve and maintain your website.
       </p>
